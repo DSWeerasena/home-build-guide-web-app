@@ -1,0 +1,10 @@
+{
+  "description": "Guides first-time Sri Lankan homeowners through house construction stages with easy material quantity estimation, progress tracking, and quality checklists.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

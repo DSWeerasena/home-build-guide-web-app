@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- figma:head-start -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Build Guide - Smart Construction Planning</title>
+    <script>
+      // Apply the saved colour theme before the first paint so the page never flashes the wrong palette.
+      // Kept inline and dependency-free so it runs before the app bundle loads.
+      try {
+        var savedTheme = localStorage.getItem("hbg-theme") === "light" ? "light" : "dark";
+        document.documentElement.dataset.theme = savedTheme;
+        document.documentElement.style.colorScheme = savedTheme;
+        if (savedTheme === "dark") document.documentElement.classList.add("dark");
+      } catch (e) { /* storage unavailable: the dark default styled by :root still applies */ }
+    </script>
+    <!-- figma:head-end -->
+  </head>
+  <body>
+    <!-- figma:body-start -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- figma:body-end -->
+  </body>
+</html>

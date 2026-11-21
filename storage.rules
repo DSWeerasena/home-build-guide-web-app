@@ -1,0 +1,16 @@
+rules_version = '2';
+
+// House plans are uploaded and deleted only through the API (Firebase Admin SDK bypasses these rules).
+// The browser displays them through short-lived signed URLs issued by the API.
+// Direct access is limited to the signed-in owner of the users/{uid}/ folder, read-only. Nothing is public.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /users/{uid}/{allPaths=**} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
