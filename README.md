@@ -219,3 +219,4 @@ Share **only the Vercel link**. The Render URL is for the website, not for peopl
 * PDF reports are generated in English (the PDF library cannot shape Sinhala text); the on-screen Reports page is fully bilingual.
 * The plan tracer works on JPG/PNG images. The API also accepts PDF plan files for storage.
 * Quantities are estimates for planning; structural decisions must follow the approved plan and professional advice.
+"# home-build-guide-web-app" 
